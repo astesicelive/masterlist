@@ -20,10 +20,10 @@ function cs__appendClasses() {
   $($rel).each(function () {
     $rel.addClass('release');
   });
-//  var $info = $('.item table');
-//  $($info).each(function () {
-//    $info.addClass('info');
-//  });
+  var $info = $('.item table');
+  $($info).each(function () {
+    $info.addClass('info');
+  });
 }
 
 cs__appendClasses();
