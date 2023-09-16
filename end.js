@@ -12,7 +12,7 @@ const selectStory = () => {
  }
 
 function cs__appendClasses() {
-  var $ch = $('td:nth-child(1)');
+  var $ch = $('td:not(#shortStory):nth-child(1)');
   $($ch).each(function () {
     $ch.addClass('chapters');
   });
