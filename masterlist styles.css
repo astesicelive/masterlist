@@ -57,15 +57,6 @@ justify-content: center;
 position: relative;
 }
 
-header > .hinatakun {
-    position: absolute;
-    right: 10%;
-    top: -87px;
-    z-index: -1;
-    width: 100px;
-    height: auto;
-}
-
 img.avtr {
 width: 125px;
 height: 125px;
