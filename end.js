@@ -10,22 +10,43 @@ const selectStory = () => {
     var $pickedStory = $('<div class="random item">' + randomTitle + storyArray[random].innerHTML + '</div>');
     $('.grid').prepend($pickedStory).isotope('prepended', $pickedStory);
  }
- 
-function cs__appendTable() {
-  $("table#info tbody").prepend(
-    "<tr><th>chapters</th><th>release</th><th>read</th></tr>"
-  );
+
+function cs__appendClasses() {
+  var $ch = $('td:nth-child(1)');
+  $($ch).each(function () {
+    $ch.addClass('chapters');
+  });
+  var $rel = $('td:nth-child(2)');
+  $($rel).each(function () {
+    $rel.addClass('release');
+  });
+  var $info = $('.item table');
+  $($info).each(function () {
+    $info.attr('id','info');
+  });
 }
 
-cs__appendTable();
+cs__appendClasses();
  
-function cs__appendBox() {
-  $("table#info tr:last-child").append(
+function cs__add() {
+  $('p#synopsis').before(
+    '<h3><span>Synopsis</span></h3>'
+  );
+  $('div.chlist').before(
+    '<h3><span>Chapter List</span></h3>'
+  );
+  $('div.charalist').before(
+    '<p align="center"><hr></p>'
+  );
+  $('table#info tbody').prepend(
+    '<tr><th>chapters</th><th>release</th><th>read</th></tr>'
+  );
+  $('table#info tr:last-child').append(
     '<td><label class="container"><input type="checkbox" checked="checked"><span class="checkmark"></span></label></td></tr>'
   );
 }
 
-cs__appendBox();
+cs__add();
 
 function cs__convertCharactersToIcons() {
   $(".characters").each(function () {
@@ -52,24 +73,6 @@ function cs__convertCharactersToIcons() {
 }
 
  cs__convertCharactersToIcons();
-
-function cs__chapterAmount() {
-  var $ch = $("td:nth-child(1)");
-  $($ch).each(function () {
-    $ch.addClass("chapters");
-  });
-}
-
-cs__chapterAmount();
-
-function cs__releaseDate() {
-  var $ch = $("td:nth-child(2)");
-  $($ch).each(function () {
-    $ch.addClass("release");
-  });
-}
-
-cs__releaseDate();
 
 function cs__translatedStatus() {
   // utility function that just sets the classes for us
