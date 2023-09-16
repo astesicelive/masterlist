@@ -195,12 +195,12 @@ body.night table.info {
 }
 
 .item h2 {margin: 5px 0 5px; color: var(--accent);}
+.item h4 {font-size: 15px; font-weight: bold; color: var(--accent); padding: 0; margin: 0 0 -1em 0;}
+.item h5 {color: var(--accent); line-height: 0; padding: 0; margin: 2em 0 -7px 0;}
 .item b {color: var(--accent);}
 .item i {font-size: 0.9em;}
 .item p {line-height: 1em;}
 .item p#synopsis {font-style: italic; font-size: 0.9em;}
-.item h4 {font-size: 15px; font-weight: bold; color: var(--accent); padding: 0; margin: 0 0 -1em 0;}
-.item h5 {color: var(--accent); line-height: 0; padding: 0; margin: 2em 0 -7px 0;}
 
 .rando {
   background-color: var(--accent);
@@ -217,9 +217,9 @@ body.night table.info {
 h2.rando {color: var(--drk-accent);}
 
 body.night .item h2 {color: var(--drk-accent);}
-body.night .item b {color: var(--drk-accent);}
 body.night .item h5 {color: var(--drk-accent);}
 body.night .item h4 {color: var(--drk-accent);}
+body.night .item b {color: var(--drk-accent);}
 
 h3 {
    width: 75%;
