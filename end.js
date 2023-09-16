@@ -1,8 +1,6 @@
 const randomTitle = `<div><h2 class="rando">Random Story</h2></div>`
 const storyArray = document.querySelectorAll('.item');
  
-document.getElementById('selectStory').onclick = () => selectStory();
- 
 const selectStory = () => {
     var $ransto = $('.random');
     $('.grid').isotope( 'remove', $ransto );
