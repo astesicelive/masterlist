@@ -1,4 +1,4 @@
-const randomTitle = `<div><h2 class="rando">Random Story</h2></div>`
+const randomTitle = `<div><h2 class="rando">Random Story</h2></div>`;
 const storyArray = document.querySelectorAll('.item');
  
 const selectStory = () => {
@@ -10,7 +10,7 @@ const selectStory = () => {
  }
 
 function cs__appendClasses() {
-  var $ch = $('td:nth-child(1)');
+  var $ch = $('td:not(#shortStory):nth-child(1)');
   $($ch).each(function () {
     $ch.addClass('chapters');
   });
@@ -27,6 +27,9 @@ function cs__appendClasses() {
 cs__appendClasses();
  
 function cs__add() {
+  $('p#divide').after(
+    '<hr id="divide"><p></p>'
+  );
   $('p#synopsis').before(
     '<h3><span>Synopsis</span></h3>'
   );
@@ -36,7 +39,7 @@ function cs__add() {
   $('.chlist#animation').before(
     '<h3><span>Episode List</span></h3>'
   );
-  $('.charalist').before(
+  $('.charalist:not([id])').before(
     '<p align="center"><hr></p>'
   );
   $("table:not([id]) tbody").prepend(
@@ -101,7 +104,9 @@ function cs__translatedStatus() {
   // *can be changed to a different selector if just checkbox isnt specific enough
   $(`.item`).each(function () {
     const $thisCard = $(this);
-    const hasTranslation = !!$thisCard.has("a[href]").length;
+    const hasFanTranslation = !!$thisCard.has("a[href]").length;
+    const hasOfficialTranslation = !!$thisCard.has("a.engstars").length;
+    const hasTranslation = hasOfficialTranslation + hasFanTranslation;
     console.log(hasTranslation);
     setClassesTranslated($thisCard, hasTranslation);
   });
