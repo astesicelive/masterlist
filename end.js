@@ -12,7 +12,7 @@ const selectStory = () => {
  }
 
 function cs__appendClasses() {
-  var $ch = $('td:not(#shortStory):nth-child(1)');
+  var $ch = $('td:nth-child(1)');
   $($ch).each(function () {
     $ch.addClass('chapters');
   });
@@ -20,10 +20,10 @@ function cs__appendClasses() {
   $($rel).each(function () {
     $rel.addClass('release');
   });
-  var $info = $('.item table');
-  $($info).each(function () {
-    $info.addClass('info');
-  });
+//  var $info = $('.item table');
+//  $($info).each(function () {
+//    $info.addClass('info');
+//  });
 }
 
 cs__appendClasses();
