@@ -22,7 +22,7 @@ function cs__appendClasses() {
   });
   var $info = $('.item table');
   $($info).each(function () {
-    $info.attr('id','info');
+    $info.addClass('info');
   });
 }
 
@@ -32,16 +32,31 @@ function cs__add() {
   $('p#synopsis').before(
     '<h3><span>Synopsis</span></h3>'
   );
-  $('div.chlist').before(
+  $('.chlist:not(#animation)').before(
     '<h3><span>Chapter List</span></h3>'
   );
-  $('div.charalist').before(
+  $('.chlist#animation').before(
+    '<h3><span>Episode List</span></h3>'
+  );
+  $('.charalist').before(
     '<p align="center"><hr></p>'
   );
-  $('table#info tbody').prepend(
+  $("table:not([id]) tbody").prepend(
     '<tr><th>chapters</th><th>release</th><th>read</th></tr>'
   );
-  $('table#info tr:last-child').append(
+  $('table#shortStory tbody').prepend(
+    '<tr><th>season</th><th>release</th><th>read</th></tr>'
+  );
+  $('table#novel tbody').prepend(
+    '<tr><th>novel</th><th>release</th><th>read</th></tr>'
+  );
+  $('table#stagePlay tbody').prepend(
+    '<tr><th>release</th><th>watched</th></tr>'
+  );
+  $('table#animation tbody').prepend(
+    '<tr><th>episodes</th><th>release</th><th>watched</th></tr>'
+  );
+  $('table.info tr:last-child').append(
     '<td><label class="container"><input type="checkbox" checked="checked"><span class="checkmark"></span></label></td></tr>'
   );
 }
