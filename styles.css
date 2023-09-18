@@ -27,6 +27,8 @@ body.night .item a {background: var(--drk-bg); color: var(--drk-font); border: v
 
 body.night .item a:hover, body.night .links a:hover {color: var(--font); background: var(--drk-accent);}
 
+body.night .item h3 {border-bottom-color: var(--drk-accent);}
+
 .follow-teaser {
 display: none;
 }
@@ -266,7 +268,12 @@ body.night span {
 }
 
 hr#divide {
-  border-top-style: dotted;
+  width: 75%;
+}
+
+body.night hr, body.night hr#divide {
+  border-top: var(--drk-accent);
+  color: var(--drk-accent);
 }
 
 .item .engstars, .item a {
