@@ -15,6 +15,9 @@ function cs__appendClasses() {
   $($chEX).each(function () {
     $chEX.attr('id','extra');
   });
+  var $cred = $('.chibi');
+  $cred.before('<a href="https://enbythemes.tumblr.com" title="code by rou">');
+  $cred.after('</a>');
 }
 
 cs__appendClasses();
