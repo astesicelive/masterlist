@@ -546,7 +546,8 @@ body.night .progress-inner::before {
 }
 
 .yuuta {
-  --link: url(https://cdn.discordapp.com/attachments/888757808357605439/900539257314226216/unknown.png);
+  --link: url(https://64.media.tumblr.com/e736793ebbd6c210902217508c7ab4b9/tumblr_inline_s332dvoQCO1sfzmnm_500.png); /* long hair */
+  /* --link: url(https://cdn.discordapp.com/attachments/888757808357605439/900539257314226216/unknown.png); short hair */
 }
 
 .rinne {
