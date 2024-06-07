@@ -117,6 +117,13 @@ img.avtr {
 .filters ul b {margin: 0 5px;}
 .selected {font-weight: bold; border-bottom: 2px solid var(--accent);}
 
+/* update notice */
+p.filters {
+  position: relative;
+  max-width: fit-content;
+  font-weight: bold;
+}
+
 /* content */
 .grid {
   width: 90%;
@@ -321,7 +328,9 @@ body.night .round {
 }
 
 .item img {
-    max-width: 101%;
+  /* max-width: 101%; */
+  min-width: -moz-available;
+  max-width: -moz-available;
 }
 
 input[type="checkbox"] {
@@ -428,8 +437,8 @@ body.night .progress-inner::before {
 
 .nui {
   position: fixed;
-  right: -30px;
-  bottom: -20px;
+  right: 5px;
+  bottom: 5px;
 }
 
 .charalist > div {
